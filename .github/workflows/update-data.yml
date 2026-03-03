@@ -2,13 +2,8 @@ name: Update Bioregional Data
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # every 30 minutes
-  workflow_dispatch:          # allow manual trigger
-  push:
-    branches: [main]
-    paths:
-      - "fetch_data.py"
-      - ".github/workflows/update-data.yml"
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -41,8 +36,8 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "data: update $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
-            # Retry push with rebase to handle concurrent workflow runs
             for i in 1 2 3; do
-              git pull --rebase && git push && break || sleep 5
+              git pull --rebase origin main && git push && break || sleep 5
             done
           fi
+
