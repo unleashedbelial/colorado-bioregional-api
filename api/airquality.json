@@ -1,0 +1,118 @@
+{
+  "source": "Static monitoring station index (OpenAQ key required for live data)",
+  "source_url": "https://openaq.org/",
+  "description": "Air quality monitoring locations within 300km of Colorado River Basin center (36.5\u00b0N, 112.5\u00b0W)",
+  "note": "OPENAQ_API_KEY not set; add as GitHub Actions secret for live data",
+  "coverage": {
+    "center_lat": 36.5,
+    "center_lon": -112.5,
+    "radius_km": 300
+  },
+  "last_updated": "2026-03-03T21:24:05.723574+00:00",
+  "locations": [
+    {
+      "name": "Grand Canyon NPS",
+      "latitude": 36.0544,
+      "longitude": -112.1401,
+      "locality": "Grand Canyon",
+      "country": "US",
+      "sensors": [
+        {
+          "parameter": "pm25",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM2.5"
+        },
+        {
+          "parameter": "ozone",
+          "unit": "ppb",
+          "display_name": "Ozone"
+        }
+      ]
+    },
+    {
+      "name": "Flagstaff",
+      "latitude": 35.1983,
+      "longitude": -111.6513,
+      "locality": "Flagstaff",
+      "country": "US",
+      "sensors": [
+        {
+          "parameter": "pm25",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM2.5"
+        },
+        {
+          "parameter": "pm10",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM10"
+        }
+      ]
+    },
+    {
+      "name": "Moab",
+      "latitude": 38.5733,
+      "longitude": -109.5498,
+      "locality": "Moab",
+      "country": "US",
+      "sensors": [
+        {
+          "parameter": "pm25",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM2.5"
+        }
+      ]
+    },
+    {
+      "name": "Las Vegas - East Charleston",
+      "latitude": 36.1699,
+      "longitude": -115.1398,
+      "locality": "Las Vegas",
+      "country": "US",
+      "sensors": [
+        {
+          "parameter": "pm25",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM2.5"
+        },
+        {
+          "parameter": "no2",
+          "unit": "ppb",
+          "display_name": "NO2"
+        }
+      ]
+    },
+    {
+      "name": "St. George",
+      "latitude": 37.0965,
+      "longitude": -113.5684,
+      "locality": "St. George",
+      "country": "US",
+      "sensors": [
+        {
+          "parameter": "pm25",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM2.5"
+        }
+      ]
+    },
+    {
+      "name": "Page",
+      "latitude": 36.9147,
+      "longitude": -111.4424,
+      "locality": "Page",
+      "country": "US",
+      "sensors": [
+        {
+          "parameter": "pm25",
+          "unit": "\u00b5g/m\u00b3",
+          "display_name": "PM2.5"
+        },
+        {
+          "parameter": "ozone",
+          "unit": "ppb",
+          "display_name": "Ozone"
+        }
+      ]
+    }
+  ]
+}

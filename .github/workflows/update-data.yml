@@ -1,0 +1,42 @@
+name: Update Bioregional Data
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:          # allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - "fetch_data.py"
+      - ".github/workflows/update-data.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch all data sources
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+          OPENAQ_API_KEY: ${{ secrets.OPENAQ_API_KEY }}
+        run: python fetch_data.py
+
+      - name: Commit updated JSON files
+        run: |
+          git config user.name  "bioregional-bot"
+          git config user.email "actions@github.com"
+          git add api/
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "data: update $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+          git push

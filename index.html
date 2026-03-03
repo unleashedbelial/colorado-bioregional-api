@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colorado River Basin — Open Bioregional Data API</title>
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --border: #1e293b;
+      --accent: #38bdf8;
+      --accent2: #34d399;
+      --text: #e2e8f0;
+      --muted: #64748b;
+      --fire: #f97316;
+      --water: #38bdf8;
+      --snow: #e0f2fe;
+      --air: #a3e635;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #0c1a35 0%, #0a2a1a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+    header p {
+      color: var(--muted);
+      margin-top: .5rem;
+      font-size: 1.05rem;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--accent2);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+    .status-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .status-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent2);
+      flex-shrink: 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .status-bar span { color: var(--muted); font-size: .9rem; }
+    #last-updated { color: var(--accent); font-weight: 600; }
+
+    h2 { font-size: 1.3rem; color: var(--accent); margin: 2rem 0 1rem; }
+    h3 { font-size: 1rem; color: var(--text); margin-bottom: .4rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color .2s;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card .icon { font-size: 1.8rem; margin-bottom: .5rem; }
+    .card .label { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+    .card .value { font-size: 1.5rem; font-weight: 700; margin: .2rem 0; }
+    .card .sub { font-size: .8rem; color: var(--muted); }
+    .water-val { color: var(--water); }
+    .snow-val { color: var(--snow); }
+    .air-val { color: var(--air); }
+    .fire-val { color: var(--fire); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+      margin-bottom: 1.5rem;
+    }
+    th { background: var(--border); padding: .6rem .8rem; text-align: left; font-weight: 600; color: var(--muted); font-size: .8rem; text-transform: uppercase; }
+    td { padding: .6rem .8rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,.02); }
+
+    .endpoint-list { display: flex; flex-direction: column; gap: .6rem; }
+    .endpoint {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .8rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .endpoint code {
+      background: rgba(56,189,248,.1);
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: .9rem;
+    }
+    .endpoint .desc { color: var(--muted); font-size: .9rem; }
+    .endpoint a {
+      margin-left: auto;
+      color: var(--accent2);
+      font-size: .85rem;
+      text-decoration: none;
+    }
+    .endpoint a:hover { text-decoration: underline; }
+
+    pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+      overflow-x: auto;
+      font-size: .82rem;
+      color: var(--accent2);
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌊 Colorado River Basin <span class="badge">Open API</span></h1>
+  <p>Real-time bioregional data: water flow · snowpack · air quality · wildfires</p>
+</header>
+
+<main>
+
+  <div class="status-bar">
+    <div class="status-dot"></div>
+    <span>Last updated: <span id="last-updated">loading…</span></span>
+    <span style="margin-left:auto">Updated every 30 min via GitHub Actions</span>
+  </div>
+
+  <!-- Live summary cards -->
+  <h2>📊 Current Conditions</h2>
+  <div class="grid" id="summary-cards">
+    <div class="card"><div class="icon">💧</div><div class="label">Water</div><div class="value water-val" id="card-water">—</div><div class="sub">Lees Ferry streamflow</div></div>
+    <div class="card"><div class="icon">❄️</div><div class="label">Snowpack</div><div class="value snow-val" id="card-snow">—</div><div class="sub">Berthoud Summit SWE</div></div>
+    <div class="card"><div class="icon">🌬️</div><div class="label">Air Quality</div><div class="value air-val" id="card-air">—</div><div class="sub">monitoring stations</div></div>
+    <div class="card"><div class="icon">🔥</div><div class="label">Active Fires</div><div class="value fire-val" id="card-fire">—</div><div class="sub">last 24 hours</div></div>
+  </div>
+
+  <!-- Gauge table -->
+  <h2>💧 Stream Gauges</h2>
+  <table id="gauge-table">
+    <thead><tr><th>Site</th><th>Location</th><th>Flow (ft³/s)</th><th>Observed</th></tr></thead>
+    <tbody><tr><td colspan="4" style="color:var(--muted)">Loading…</td></tr></tbody>
+  </table>
+
+  <!-- API Endpoints -->
+  <h2>🔌 API Endpoints</h2>
+  <div class="endpoint-list">
+    <div class="endpoint">
+      <code>GET /api/data.json</code>
+      <span class="desc">Master file — all data + metadata</span>
+      <a href="api/data.json" target="_blank">↗ Open</a>
+    </div>
+    <div class="endpoint">
+      <code>GET /api/water.json</code>
+      <span class="desc">USGS streamflow gauges (4 sites)</span>
+      <a href="api/water.json" target="_blank">↗ Open</a>
+    </div>
+    <div class="endpoint">
+      <code>GET /api/snowpack.json</code>
+      <span class="desc">SNOTEL snow water equivalent</span>
+      <a href="api/snowpack.json" target="_blank">↗ Open</a>
+    </div>
+    <div class="endpoint">
+      <code>GET /api/airquality.json</code>
+      <span class="desc">OpenAQ monitoring locations</span>
+      <a href="api/airquality.json" target="_blank">↗ Open</a>
+    </div>
+    <div class="endpoint">
+      <code>GET /api/wildfire.json</code>
+      <span class="desc">NASA FIRMS active fires (24h)</span>
+      <a href="api/wildfire.json" target="_blank">↗ Open</a>
+    </div>
+    <div class="endpoint">
+      <code>GET /api/meta.json</code>
+      <span class="desc">Metadata, sources, last update</span>
+      <a href="api/meta.json" target="_blank">↗ Open</a>
+    </div>
+  </div>
+
+  <!-- Example usage -->
+  <h2>📖 Example Usage</h2>
+  <h3>Fetch streamflow data</h3>
+  <pre>fetch("https://unleashedbelial.github.io/colorado-bioregional-api/api/water.json")
+  .then(r => r.json())
+  .then(d => {
+    d.gauges.forEach(g => {
+      console.log(g.site_name, g.latest?.value, "ft³/s");
+    });
+  });</pre>
+
+  <h3>Python example</h3>
+  <pre>import urllib.request, json
+
+url = "https://unleashedbelial.github.io/colorado-bioregional-api/api/data.json"
+with urllib.request.urlopen(url) as r:
+    data = json.loads(r.read())
+
+print("Last updated:", data["last_updated"])
+print("Active fires:", data["wildfire"]["fire_count"])
+for gauge in data["water"]["gauges"]:
+    flow = gauge["latest"]["value"] if gauge["latest"] else "N/A"
+    print(f"  {gauge['site_name']}: {flow} ft³/s")</pre>
+
+  <h2>🗺️ Coverage</h2>
+  <table>
+    <thead><tr><th>Dataset</th><th>Source</th><th>Update Frequency</th><th>Coverage</th></tr></thead>
+    <tbody>
+      <tr><td>Streamflow</td><td>USGS NWIS</td><td>15-min (real-time)</td><td>4 mainstem gauges</td></tr>
+      <tr><td>Snowpack</td><td>USDA SNOTEL</td><td>Daily</td><td>Upper Colorado Basin, Station 356</td></tr>
+      <tr><td>Air Quality</td><td>OpenAQ v3</td><td>Hourly (varies)</td><td>300km radius from basin center</td></tr>
+      <tr><td>Wildfires</td><td>NASA FIRMS VIIRS</td><td>Daily (NRT)</td><td>31–42°N, 107–115°W bounding box</td></tr>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  Open data. Public domain. Built with GitHub Pages + Actions.<br/>
+  <a href="https://github.com/unleashedbelial/colorado-bioregional-api" target="_blank">GitHub ↗</a>
+  &nbsp;·&nbsp;
+  <a href="api/meta.json" target="_blank">meta.json ↗</a>
+</footer>
+
+<script>
+async function loadData() {
+  try {
+    const [meta, water, snowpack, airquality, wildfire] = await Promise.all([
+      fetch("api/meta.json").then(r => r.json()).catch(() => null),
+      fetch("api/water.json").then(r => r.json()).catch(() => null),
+      fetch("api/snowpack.json").then(r => r.json()).catch(() => null),
+      fetch("api/airquality.json").then(r => r.json()).catch(() => null),
+      fetch("api/wildfire.json").then(r => r.json()).catch(() => null),
+    ]);
+
+    if (meta) {
+      const d = new Date(meta.last_updated);
+      document.getElementById("last-updated").textContent = d.toUTCString();
+    }
+
+    // Summary cards
+    if (water && water.gauges) {
+      const leesFerry = water.gauges.find(g => g.site_id === "09380000");
+      if (leesFerry && leesFerry.latest) {
+        const v = leesFerry.latest.value;
+        document.getElementById("card-water").textContent = v != null ? v.toLocaleString() + " ft³/s" : "N/A";
+      }
+
+      // Gauge table
+      const tbody = document.querySelector("#gauge-table tbody");
+      tbody.innerHTML = water.gauges.map(g => {
+        const v = g.latest?.value;
+        const dt = g.latest?.datetime ? new Date(g.latest.datetime).toLocaleString() : "—";
+        return `<tr>
+          <td><code style="color:var(--accent)">${g.site_id}</code></td>
+          <td>${g.site_name}</td>
+          <td style="color:var(--water);font-weight:600">${v != null ? v.toLocaleString() : "N/A"}</td>
+          <td style="color:var(--muted);font-size:.85rem">${dt}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    if (snowpack && snowpack.stations && snowpack.stations[0]) {
+      const s = snowpack.stations[0];
+      document.getElementById("card-snow").textContent =
+        s.snow_water_equivalent_inches != null ? s.snow_water_equivalent_inches + '"' : "N/A";
+    }
+
+    if (airquality && airquality.locations) {
+      document.getElementById("card-air").textContent = airquality.locations.length + " stations";
+    }
+
+    if (wildfire) {
+      document.getElementById("card-fire").textContent = wildfire.fire_count + " detections";
+    }
+  } catch(e) {
+    console.error("Error loading data:", e);
+  }
+}
+loadData();
+</script>
+</body>
+</html>

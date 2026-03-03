@@ -1,0 +1,47 @@
+{
+  "last_updated": "2026-03-03T21:24:05.723574+00:00",
+  "update_frequency": "every 30 minutes via GitHub Actions",
+  "region": "Colorado River Basin",
+  "sources": [
+    {
+      "name": "USGS NWIS",
+      "url": "https://waterservices.usgs.gov/",
+      "endpoint": "/api/water.json",
+      "parameters": [
+        "streamflow (ft3/s)"
+      ]
+    },
+    {
+      "name": "USDA SNOTEL",
+      "url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
+      "endpoint": "/api/snowpack.json",
+      "parameters": [
+        "snow water equivalent (inches)"
+      ]
+    },
+    {
+      "name": "OpenAQ",
+      "url": "https://openaq.org/",
+      "endpoint": "/api/airquality.json",
+      "parameters": [
+        "PM2.5",
+        "PM10",
+        "O3",
+        "NO2",
+        "CO"
+      ]
+    },
+    {
+      "name": "NASA FIRMS",
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "endpoint": "/api/wildfire.json",
+      "parameters": [
+        "fire radiative power (MW)",
+        "brightness temperature (K)"
+      ]
+    }
+  ],
+  "license": "Public domain / open data",
+  "maintainer": "unleashedbelial",
+  "github": "https://github.com/unleashedbelial/colorado-bioregional-api"
+}
