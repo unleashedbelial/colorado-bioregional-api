@@ -37,6 +37,12 @@ jobs:
           git config user.name  "bioregional-bot"
           git config user.email "actions@github.com"
           git add api/
-          git diff --cached --quiet && echo "No changes to commit" || \
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
             git commit -m "data: update $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
-          git push
+            # Retry push with rebase to handle concurrent workflow runs
+            for i in 1 2 3; do
+              git pull --rebase && git push && break || sleep 5
+            done
+          fi
