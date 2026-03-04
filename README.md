@@ -1,221 +1,221 @@
 # 🌊 Colorado River Basin — Open Bioregional Data API
 
-A static JSON API hosted on GitHub Pages that aggregates real-time bioregional data for the **Colorado River Basin**: USGS streamflow, SNOTEL snowpack, OpenAQ air quality, and NASA FIRMS wildfire data.
+Real-time bioregional data for the **Colorado River Basin**: USGS streamflow, SNOTEL snowpack, OpenAQ air quality, and NASA FIRMS wildfire detections.
 
-Updated every **30 minutes** via GitHub Actions.
+Two deployment flavors — use whichever fits your use case:
 
-**Live URL:** https://unleashedbelial.github.io/colorado-bioregional-api/
-
----
-
-## 📡 API Endpoints
-
-All endpoints return JSON with CORS headers (served via GitHub Pages).
-
-| Endpoint | Description | Source |
-|----------|-------------|--------|
-| [`/api/data.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/data.json) | Master file — all datasets + metadata | All sources |
-| [`/api/water.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/water.json) | Streamflow at 4 mainstem gauges | USGS NWIS |
-| [`/api/snowpack.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/snowpack.json) | Snow Water Equivalent (SWE) | USDA SNOTEL |
-| [`/api/airquality.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/airquality.json) | Air quality monitoring stations | OpenAQ v3 |
-| [`/api/wildfire.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/wildfire.json) | Active fires (last 24h) | NASA FIRMS VIIRS |
-| [`/api/meta.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/meta.json) | Metadata, sources, update info | — |
+| Flavor | URL | Best for |
+|--------|-----|----------|
+| **Live FastAPI** | `https://bioregionalapi.belial.lol` | Real-time queries, Swagger UI, low-latency |
+| **Static JSON** (GitHub Pages) | `https://unleashedbelial.github.io/colorado-bioregional-api` | No-backend clients, simple GET, caching |
 
 ---
 
-## 💧 Water — `water.json`
+## 🚀 Live API — `bioregionalapi.belial.lol`
 
-Real-time streamflow from USGS National Water Information System.
+FastAPI running on a VPS, refreshed on every request (30-min in-memory cache).
 
-**Gauges:**
-| Site ID | Location |
-|---------|----------|
-| 09380000 | Colorado River at Lees Ferry, AZ |
-| 09421500 | Colorado River below Hoover Dam, AZ-NV |
-| 09404200 | Colorado River near Grand Canyon, AZ |
-| 09095500 | Colorado River near Cameo, CO |
+**Interactive docs:** [`https://bioregionalapi.belial.lol/docs`](https://bioregionalapi.belial.lol/docs)
 
-**Example response:**
-```json
-{
-  "source": "USGS National Water Information System",
-  "last_updated": "2024-01-15T14:30:00+00:00",
-  "unit": "ft3/s (cubic feet per second)",
-  "gauges": [
-    {
-      "site_id": "09380000",
-      "site_name": "Colorado River at Lees Ferry, AZ",
-      "latitude": 36.8647,
-      "longitude": -111.5878,
-      "latest": {
-        "value": 8240.0,
-        "unit": "ft3/s",
-        "datetime": "2024-01-15T14:15:00.000-07:00"
-      }
-    }
-  ]
-}
-```
+### Endpoints
 
----
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/` | Endpoint index + metadata |
+| `GET` | `/health` | Service health + cache status |
+| `GET` | `/water` | USGS streamflow gauges |
+| `GET` | `/snowpack` | SNOTEL snow water equivalent |
+| `GET` | `/airquality` | OpenAQ air quality stations |
+| `GET` | `/wildfire` | NASA FIRMS active fires (24h) |
+| `GET` | `/all` | All datasets combined |
 
-## ❄️ Snowpack — `snowpack.json`
+### Quick start
 
-Daily Snow Water Equivalent from USDA NRCS SNOTEL network.
+```bash
+# Health check
+curl https://bioregionalapi.belial.lol/health
 
-**Station:** 356 — Berthoud Summit, Upper Colorado River Basin
+# Water levels
+curl https://bioregionalapi.belial.lol/water | python3 -m json.tool
 
-**Example response:**
-```json
-{
-  "source": "USDA Natural Resources Conservation Service SNOTEL",
-  "last_updated": "2024-01-15T14:30:00+00:00",
-  "stations": [
-    {
-      "station_id": "356",
-      "station_name": "Berthoud Summit",
-      "date": "2024-01-15",
-      "snow_water_equivalent_inches": 12.3,
-      "unit": "inches"
-    }
-  ]
-}
-```
-
----
-
-## 🌬️ Air Quality — `airquality.json`
-
-Air quality monitoring locations within 300km of the basin center (36.5°N, 112.5°W).
-
-**Example response:**
-```json
-{
-  "source": "OpenAQ",
-  "coverage": { "center_lat": 36.5, "center_lon": -112.5, "radius_km": 300 },
-  "locations": [
-    {
-      "id": 12345,
-      "name": "Grand Canyon NPS",
-      "latitude": 36.05,
-      "longitude": -112.14,
-      "sensors": [
-        { "parameter": "pm25", "unit": "µg/m³", "display_name": "PM2.5" }
-      ]
-    }
-  ]
-}
-```
-
----
-
-## 🔥 Wildfires — `wildfire.json`
-
-Active fire detections from NASA FIRMS VIIRS satellite data, filtered to the Colorado River Basin bounding box (31–42°N, 107–115°W).
-
-**Example response:**
-```json
-{
-  "source": "NASA FIRMS VIIRS NOAA-20 C2 (24h)",
-  "fire_count": 3,
-  "fires": [
-    {
-      "latitude": 35.12,
-      "longitude": -110.45,
-      "brightness": 312.4,
-      "frp": 8.2,
-      "confidence": "nominal",
-      "acq_date": "2024-01-15",
-      "satellite": "VIIRS NOAA-20"
-    }
-  ]
-}
-```
-
----
-
-## 🔧 Usage Examples
-
-### JavaScript / Fetch API
-```javascript
-// Get all data
-const data = await fetch(
-  "https://unleashedbelial.github.io/colorado-bioregional-api/api/data.json"
-).then(r => r.json());
-
-console.log("Active fires:", data.wildfire.fire_count);
-console.log("Lees Ferry flow:", data.water.gauges[0].latest?.value, "ft³/s");
+# Everything at once
+curl https://bioregionalapi.belial.lol/all | python3 -m json.tool
 ```
 
 ### Python
 ```python
-import urllib.request, json
+import httpx
 
-BASE = "https://unleashedbelial.github.io/colorado-bioregional-api"
+BASE = "https://bioregionalapi.belial.lol"
 
-with urllib.request.urlopen(f"{BASE}/api/water.json") as r:
-    water = json.loads(r.read())
+# All data in one shot
+data = httpx.get(f"{BASE}/all").json()
 
-for gauge in water["gauges"]:
-    flow = gauge["latest"]["value"] if gauge["latest"] else "N/A"
-    print(f"{gauge['site_name']}: {flow} ft³/s")
+print("Lees Ferry flow:", data["water"]["gauges"][0]["latest"]["value"], "ft³/s")
+print("Active fires:", data["wildfire"]["fire_count"])
+print("Snowpack (SWE):", data["snowpack"]["stations"][0]["snow_water_equivalent_inches"], "in")
 ```
 
-### curl
+### JavaScript
+```javascript
+const BASE = "https://bioregionalapi.belial.lol";
+
+const { water, snowpack, wildfire } = await fetch(`${BASE}/all`).then(r => r.json());
+
+console.log("Flow:", water.gauges[0].latest?.value, "ft³/s");
+console.log("Fires:", wildfire.fire_count);
+```
+
+---
+
+## 📦 Static JSON API — GitHub Pages
+
+Refreshed every 30 minutes via GitHub Actions. CORS open. No server needed.
+
+**Base URL:** `https://unleashedbelial.github.io/colorado-bioregional-api`
+
+| Endpoint | Description |
+|----------|-------------|
+| [`/api/data.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/data.json) | All datasets combined |
+| [`/api/water.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/water.json) | USGS streamflow |
+| [`/api/snowpack.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/snowpack.json) | SNOTEL snowpack |
+| [`/api/airquality.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/airquality.json) | Air quality |
+| [`/api/wildfire.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/wildfire.json) | Active fires (24h) |
+| [`/api/meta.json`](https://unleashedbelial.github.io/colorado-bioregional-api/api/meta.json) | Metadata + last update |
+
+---
+
+## 🛠 Self-hosting the FastAPI
+
+### Requirements
+
+- Python 3.10+
+- pip
+
+### Install
+
 ```bash
-curl -s https://unleashedbelial.github.io/colorado-bioregional-api/api/meta.json | python3 -m json.tool
+git clone https://github.com/unleashedbelial/colorado-bioregional-api.git
+cd colorado-bioregional-api
+
+pip install -r requirements.txt
+```
+
+`requirements.txt`:
+```
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+httpx==0.27.2
+```
+
+### Run
+
+```bash
+# Development
+uvicorn main:app --reload --port 3006
+
+# Production
+uvicorn main:app --host 0.0.0.0 --port 3006 --workers 2
+```
+
+API available at `http://localhost:3006` · Swagger at `http://localhost:3006/docs`
+
+### Run with PM2 (persistent)
+
+```bash
+npm install -g pm2
+
+pm2 start ecosystem.config.js
+pm2 save
+pm2 startup
+```
+
+`ecosystem.config.js` is included in the repo.
+
+### Docker (optional)
+
+```dockerfile
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY main.py .
+EXPOSE 3006
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "3006"]
+```
+
+```bash
+docker build -t bioregional-api .
+docker run -p 3006:3006 bioregional-api
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🏗 Architecture
 
 ```
-GitHub Actions (every 30 min)
-       │
-       ▼
-  fetch_data.py
-  ├── USGS NWIS API ──────────▶ api/water.json
-  ├── USDA SNOTEL CSV ────────▶ api/snowpack.json
-  ├── OpenAQ v3 API ──────────▶ api/airquality.json
-  └── NASA FIRMS CSV ─────────▶ api/wildfire.json
-                                     │
-                                     ▼
-                               api/data.json (master)
-                               api/meta.json
-                                     │
-                               git commit + push
-                                     │
-                               GitHub Pages serves
-                               static JSON files
+┌─────────────────────────────────────────────┐
+│               Live FastAPI                  │
+│         bioregionalapi.belial.lol           │
+│                                             │
+│  GET /water ─────▶ USGS NWIS API           │
+│  GET /snowpack ──▶ USDA SNOTEL CSV         │
+│  GET /airquality ▶ OpenAQ v3 API           │
+│  GET /wildfire ──▶ NASA FIRMS CSV          │
+│                    (30-min in-memory cache) │
+└─────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────┐
+│           Static JSON (GitHub Pages)        │
+│                                             │
+│  GitHub Actions (*/30 * * * *)              │
+│       └─▶ fetch_data.py                     │
+│            ├─▶ api/water.json               │
+│            ├─▶ api/snowpack.json            │
+│            ├─▶ api/airquality.json          │
+│            ├─▶ api/wildfire.json            │
+│            └─▶ api/data.json (master)       │
+│                     │                       │
+│               git commit + push             │
+│                     │                       │
+│            GitHub Pages serves              │
+└─────────────────────────────────────────────┘
 ```
-
----
-
-## 📦 Setup (self-hosting)
-
-1. Fork this repo
-2. Enable GitHub Pages: Settings → Pages → Source: main branch, root `/`
-3. (Optional) Add `FIRMS_MAP_KEY` secret for NASA FIRMS API access
-4. The workflow runs automatically every 30 minutes
 
 ---
 
 ## 📊 Data Sources
 
-| Source | License | Homepage |
-|--------|---------|----------|
-| USGS NWIS | Public domain | https://waterservices.usgs.gov/ |
-| USDA SNOTEL | Public domain | https://www.nrcs.usda.gov/ |
-| OpenAQ | CC BY 4.0 | https://openaq.org/ |
-| NASA FIRMS | Public domain | https://firms.modaps.eosdis.nasa.gov/ |
+| Source | Data | License |
+|--------|------|---------|
+| [USGS NWIS](https://waterservices.usgs.gov/) | Streamflow gauges | Public domain |
+| [USDA SNOTEL](https://www.nrcs.usda.gov/wps/portal/wcc/home/) | Snow water equivalent | Public domain |
+| [OpenAQ](https://openaq.org/) | Air quality | CC BY 4.0 |
+| [NASA FIRMS](https://firms.modaps.eosdis.nasa.gov/) | Active fire detections | Public domain |
+
+---
+
+## 🌍 Coverage
+
+Colorado River Basin — 246,000 mi² across 7 US states and Mexico.
+
+Bounding box: `31–42°N, 107–115°W`
+
+**Key gauges monitored:**
+
+| USGS Site | Location |
+|-----------|----------|
+| 09380000 | Colorado River at Lees Ferry, AZ |
+| 09421500 | Colorado River below Hoover Dam, AZ-NV |
+| 09404200 | Colorado River near Grand Canyon, AZ |
+| 09095500 | Colorado River near Cameo, CO |
 
 ---
 
 ## 🤝 Contributing
 
-Issues and PRs welcome. The fetch script is plain Python 3 with no external dependencies.
+Issues and PRs welcome. `fetch_data.py` is pure Python stdlib — no external deps. `main.py` uses FastAPI + httpx.
 
 ---
 
-*Built for the open bioregional data commons. Colorado River Basin — 246,000 mi².*
+*Built for the open bioregional data commons.*
