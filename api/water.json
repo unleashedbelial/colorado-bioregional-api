@@ -3,7 +3,7 @@
   "source_url": "https://waterservices.usgs.gov/",
   "description": "Real-time streamflow for Colorado River Basin gauges",
   "unit": "ft3/s (cubic feet per second)",
-  "last_updated": "2026-03-07T22:45:40.531830+00:00",
+  "last_updated": "2026-03-07T23:14:34.647095+00:00",
   "gauges": [
     {
       "site_id": "09095500",
@@ -12,9 +12,9 @@
       "longitude": -108.2661946,
       "parameter": "Streamflow",
       "latest": {
-        "value": 1270.0,
+        "value": 1300.0,
         "unit": "ft3/s",
-        "datetime": "2026-03-07T15:30:00.000-07:00",
+        "datetime": "2026-03-07T16:00:00.000-07:00",
         "qualifiers": [
           "P"
         ]
@@ -29,7 +29,7 @@
       "latest": {
         "value": 8380.0,
         "unit": "ft3/s",
-        "datetime": "2026-03-07T15:00:00.000-07:00",
+        "datetime": "2026-03-07T16:00:00.000-07:00",
         "qualifiers": [
           "P"
         ]
