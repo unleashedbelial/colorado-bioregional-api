@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-03-11T23:17:57.816691+00:00",
-  "fire_count": 14,
+  "last_updated": "2026-03-11T23:46:35.948878+00:00",
+  "fire_count": 21,
   "fires": [
     {
       "latitude": 40.82404,
@@ -149,6 +149,76 @@
       "confidence": "nominal",
       "acq_date": "2026-03-11",
       "acq_time": "0945",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.97913,
+      "longitude": -111.21816,
+      "brightness": 367.0,
+      "frp": 38.54,
+      "confidence": "high",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.97725,
+      "longitude": -111.22452,
+      "brightness": 333.9,
+      "frp": 23.25,
+      "confidence": "nominal",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 38.53003,
+      "longitude": -109.09778,
+      "brightness": 346.72,
+      "frp": 5.54,
+      "confidence": "nominal",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 38.53539,
+      "longitude": -109.0994,
+      "brightness": 333.79,
+      "frp": 5.54,
+      "confidence": "nominal",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.15614,
+      "longitude": -108.60213,
+      "brightness": 325.12,
+      "frp": 1.04,
+      "confidence": "nominal",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.15276,
+      "longitude": -108.63596,
+      "brightness": 331.0,
+      "frp": 2.51,
+      "confidence": "nominal",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 40.2221,
+      "longitude": -109.99853,
+      "brightness": 329.75,
+      "frp": 0.91,
+      "confidence": "nominal",
+      "acq_date": "2026-03-11",
+      "acq_time": "1925",
       "satellite": "N20"
     }
   ]
