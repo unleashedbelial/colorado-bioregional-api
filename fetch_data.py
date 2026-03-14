@@ -42,6 +42,9 @@ def fetch_url(url, headers=None, timeout=30):
     except URLError as e:
         print(f"  URL error for {url}: {e.reason}", file=sys.stderr)
         return None
+    except (TimeoutError, OSError) as e:
+        print(f"  Timeout/OS error for {url}: {e}", file=sys.stderr)
+        return None
 
 
 # ── USGS Streamflow ──────────────────────────────────────────────────────────
