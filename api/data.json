@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23T19:41:45.016089+00:00",
+  "last_updated": "2026-03-23T20:29:52.773867+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-03-23T19:41:45.016089+00:00",
+    "last_updated": "2026-03-23T20:29:52.773867+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -32,9 +32,9 @@
         "longitude": -108.2661946,
         "parameter": "Streamflow",
         "latest": {
-          "value": 1380.0,
+          "value": 1390.0,
           "unit": "ft3/s",
-          "datetime": "2026-03-23T13:15:00.000-06:00",
+          "datetime": "2026-03-23T14:15:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -47,9 +47,9 @@
         "longitude": -111.58787222,
         "parameter": "Streamflow",
         "latest": {
-          "value": 8660.0,
+          "value": 8630.0,
           "unit": "ft3/s",
-          "datetime": "2026-03-23T12:00:00.000-07:00",
+          "datetime": "2026-03-23T13:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-03-23T19:41:45.016089+00:00",
+    "last_updated": "2026-03-23T20:29:52.773867+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -100,7 +100,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-03-23T19:41:45.016089+00:00",
+    "last_updated": "2026-03-23T20:29:52.773867+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,7 +218,7 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-03-23T19:41:45.016089+00:00",
+    "last_updated": "2026-03-23T20:29:52.773867+00:00",
     "fire_count": 42,
     "fires": [
       {
