@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-24T05:19:42.923962+00:00",
+  "last_updated": "2026-03-24T06:36:30.212719+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-03-24T05:19:42.923962+00:00",
+    "last_updated": "2026-03-24T06:36:30.212719+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -32,9 +32,9 @@
         "longitude": -108.2661946,
         "parameter": "Streamflow",
         "latest": {
-          "value": 1480.0,
+          "value": 1490.0,
           "unit": "ft3/s",
-          "datetime": "2026-03-23T23:00:00.000-06:00",
+          "datetime": "2026-03-24T00:15:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -49,7 +49,7 @@
         "latest": {
           "value": 9060.0,
           "unit": "ft3/s",
-          "datetime": "2026-03-23T22:00:00.000-07:00",
+          "datetime": "2026-03-23T23:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -64,7 +64,7 @@
         "latest": {
           "value": 9210.0,
           "unit": "ft3/s",
-          "datetime": "2026-03-23T21:30:00.000-07:00",
+          "datetime": "2026-03-23T22:30:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,19 +76,8 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-03-24T05:19:42.923962+00:00",
-    "stations": [
-      {
-        "station_id": "356",
-        "station_name": "Berthoud Summit",
-        "network": "SNOTEL",
-        "state": "CO",
-        "basin": "Upper Colorado River Basin",
-        "date": "",
-        "snow_water_equivalent_inches": null,
-        "unit": "inches"
-      }
-    ]
+    "last_updated": "2026-03-24T06:36:30.212719+00:00",
+    "stations": []
   },
   "airquality": {
     "source": "Static monitoring station index (OpenAQ key required for live data)",
@@ -100,7 +89,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-03-24T05:19:42.923962+00:00",
+    "last_updated": "2026-03-24T06:36:30.212719+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,7 +207,7 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-03-24T05:19:42.923962+00:00",
+    "last_updated": "2026-03-24T06:36:30.212719+00:00",
     "fire_count": 13,
     "fires": [
       {
