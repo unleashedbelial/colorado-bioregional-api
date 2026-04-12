@@ -1,5 +1,5 @@
 {
-  "source": "NASA FIRMS",
+  "source": "NASA FIRMS VIIRS NOAA-20 C2 (24h)",
   "source_url": "https://firms.modaps.eosdis.nasa.gov/",
   "description": "Active wildfires in the Colorado River Basin (31-42\u00b0N, 107-115\u00b0W), last 24 hours",
   "coverage_bbox": {
@@ -8,7 +8,48 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-04-12T11:27:17.832165+00:00",
-  "fire_count": 0,
-  "fires": []
+  "last_updated": "2026-04-12T11:55:51.072891+00:00",
+  "fire_count": 4,
+  "fires": [
+    {
+      "latitude": 32.25175,
+      "longitude": -110.86031,
+      "brightness": 298.31,
+      "frp": 0.59,
+      "confidence": "nominal",
+      "acq_date": "2026-04-11",
+      "acq_time": "0826",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 40.82365,
+      "longitude": -114.25642,
+      "brightness": 296.13,
+      "frp": 1.04,
+      "confidence": "nominal",
+      "acq_date": "2026-04-11",
+      "acq_time": "1004",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 38.94141,
+      "longitude": -112.81841,
+      "brightness": 298.15,
+      "frp": 1.53,
+      "confidence": "nominal",
+      "acq_date": "2026-04-11",
+      "acq_time": "1004",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 38.93687,
+      "longitude": -112.81518,
+      "brightness": 299.8,
+      "frp": 1.8,
+      "confidence": "nominal",
+      "acq_date": "2026-04-11",
+      "acq_time": "1004",
+      "satellite": "N20"
+    }
+  ]
 }
