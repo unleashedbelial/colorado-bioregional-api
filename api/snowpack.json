@@ -2,7 +2,7 @@
   "source": "USDA Natural Resources Conservation Service SNOTEL",
   "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
   "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-  "last_updated": "2026-04-24T10:48:36.130893+00:00",
+  "last_updated": "2026-04-24T11:52:45.722743+00:00",
   "stations": [
     {
       "station_id": "356",
