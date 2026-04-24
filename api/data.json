@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-24T21:39:48.758224+00:00",
+  "last_updated": "2026-04-24T22:32:34.630427+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-04-24T21:39:48.758224+00:00",
+    "last_updated": "2026-04-24T22:32:34.630427+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -32,9 +32,9 @@
         "longitude": -108.2661946,
         "parameter": "Streamflow",
         "latest": {
-          "value": 1390.0,
+          "value": 1370.0,
           "unit": "ft3/s",
-          "datetime": "2026-04-24T15:15:00.000-06:00",
+          "datetime": "2026-04-24T16:15:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -47,9 +47,9 @@
         "longitude": -111.58787222,
         "parameter": "Streamflow",
         "latest": {
-          "value": 7970.0,
+          "value": 8040.0,
           "unit": "ft3/s",
-          "datetime": "2026-04-24T14:00:00.000-07:00",
+          "datetime": "2026-04-24T15:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-04-24T21:39:48.758224+00:00",
+    "last_updated": "2026-04-24T22:32:34.630427+00:00",
     "stations": []
   },
   "airquality": {
@@ -89,7 +89,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-04-24T21:39:48.758224+00:00",
+    "last_updated": "2026-04-24T22:32:34.630427+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -207,8 +207,8 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-04-24T21:39:48.758224+00:00",
-    "fire_count": 41,
+    "last_updated": "2026-04-24T22:32:34.630427+00:00",
+    "fire_count": 43,
     "fires": [
       {
         "latitude": 38.93871,
@@ -618,6 +618,26 @@
         "confidence": "nominal",
         "acq_date": "2026-04-24",
         "acq_time": "0922",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 37.26238,
+        "longitude": -107.52539,
+        "brightness": 343.71,
+        "frp": 14.66,
+        "confidence": "nominal",
+        "acq_date": "2026-04-24",
+        "acq_time": "1902",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 37.25979,
+        "longitude": -107.52847,
+        "brightness": 340.71,
+        "frp": 9.69,
+        "confidence": "nominal",
+        "acq_date": "2026-04-24",
+        "acq_time": "1902",
         "satellite": "N20"
       }
     ]
