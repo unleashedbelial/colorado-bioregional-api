@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-27T20:36:44.160432+00:00",
+  "last_updated": "2026-04-27T21:46:21.242210+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-04-27T20:36:44.160432+00:00",
+    "last_updated": "2026-04-27T21:46:21.242210+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -32,9 +32,9 @@
         "longitude": -108.2661946,
         "parameter": "Streamflow",
         "latest": {
-          "value": 2190.0,
+          "value": 2210.0,
           "unit": "ft3/s",
-          "datetime": "2026-04-27T14:15:00.000-06:00",
+          "datetime": "2026-04-27T15:30:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -47,9 +47,9 @@
         "longitude": -111.58787222,
         "parameter": "Streamflow",
         "latest": {
-          "value": 7840.0,
+          "value": 7940.0,
           "unit": "ft3/s",
-          "datetime": "2026-04-27T13:00:00.000-07:00",
+          "datetime": "2026-04-27T14:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -62,9 +62,9 @@
         "longitude": -113.363544,
         "parameter": "Streamflow",
         "latest": {
-          "value": 6940.0,
+          "value": 7280.0,
           "unit": "ft3/s",
-          "datetime": "2026-04-27T12:30:00.000-07:00",
+          "datetime": "2026-04-27T14:30:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-04-27T20:36:44.160432+00:00",
+    "last_updated": "2026-04-27T21:46:21.242210+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -100,7 +100,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-04-27T20:36:44.160432+00:00",
+    "last_updated": "2026-04-27T21:46:21.242210+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,7 +218,7 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-04-27T20:36:44.160432+00:00",
+    "last_updated": "2026-04-27T21:46:21.242210+00:00",
     "fire_count": 139,
     "fires": [
       {
