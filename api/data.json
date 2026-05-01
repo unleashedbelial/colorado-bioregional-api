@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-01T22:09:23.484525+00:00",
+  "last_updated": "2026-05-01T23:12:03.364589+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-05-01T22:09:23.484525+00:00",
+    "last_updated": "2026-05-01T23:12:03.364589+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -34,7 +34,7 @@
         "latest": {
           "value": 1900.0,
           "unit": "ft3/s",
-          "datetime": "2026-05-01T15:45:00.000-06:00",
+          "datetime": "2026-05-01T16:45:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -47,9 +47,9 @@
         "longitude": -111.58787222,
         "parameter": "Streamflow",
         "latest": {
-          "value": 8110.0,
+          "value": 8170.0,
           "unit": "ft3/s",
-          "datetime": "2026-05-01T14:00:00.000-07:00",
+          "datetime": "2026-05-01T15:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -62,9 +62,9 @@
         "longitude": -113.363544,
         "parameter": "Streamflow",
         "latest": {
-          "value": 7380.0,
+          "value": 7590.0,
           "unit": "ft3/s",
-          "datetime": "2026-05-01T14:30:00.000-07:00",
+          "datetime": "2026-05-01T15:30:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-05-01T22:09:23.484525+00:00",
+    "last_updated": "2026-05-01T23:12:03.364589+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -100,7 +100,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-05-01T22:09:23.484525+00:00",
+    "last_updated": "2026-05-01T23:12:03.364589+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,8 +218,8 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-05-01T22:09:23.484525+00:00",
-    "fire_count": 40,
+    "last_updated": "2026-05-01T23:12:03.364589+00:00",
+    "fire_count": 43,
     "fires": [
       {
         "latitude": 38.93805,
@@ -619,6 +619,36 @@
         "confidence": "nominal",
         "acq_date": "2026-05-01",
         "acq_time": "1030",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 32.8924,
+        "longitude": -113.5321,
+        "brightness": 343.85,
+        "frp": 7.45,
+        "confidence": "low",
+        "acq_date": "2026-05-01",
+        "acq_time": "2010",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 40.75901,
+        "longitude": -112.03599,
+        "brightness": 334.2,
+        "frp": 3.77,
+        "confidence": "low",
+        "acq_date": "2026-05-01",
+        "acq_time": "2010",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 41.63581,
+        "longitude": -112.65516,
+        "brightness": 335.64,
+        "frp": 2.29,
+        "confidence": "low",
+        "acq_date": "2026-05-01",
+        "acq_time": "2012",
         "satellite": "N20"
       }
     ]
