@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-05-10T22:37:29.646264+00:00",
-  "fire_count": 43,
+  "last_updated": "2026-05-10T23:41:52.481279+00:00",
+  "fire_count": 44,
   "fires": [
     {
       "latitude": 33.95729,
@@ -439,6 +439,16 @@
       "confidence": "nominal",
       "acq_date": "2026-05-10",
       "acq_time": "1902",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 33.34971,
+      "longitude": -108.60993,
+      "brightness": 336.53,
+      "frp": 9.65,
+      "confidence": "low",
+      "acq_date": "2026-05-10",
+      "acq_time": "2040",
       "satellite": "N20"
     }
   ]
