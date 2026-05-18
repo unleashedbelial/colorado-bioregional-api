@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-05-18T21:43:32.401209+00:00",
-  "fire_count": 22,
+  "last_updated": "2026-05-18T22:50:16.718932+00:00",
+  "fire_count": 29,
   "fires": [
     {
       "latitude": 40.12206,
@@ -229,6 +229,76 @@
       "confidence": "nominal",
       "acq_date": "2026-05-18",
       "acq_time": "1013",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 32.18018,
+      "longitude": -110.87026,
+      "brightness": 352.8,
+      "frp": 3.84,
+      "confidence": "nominal",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 32.18098,
+      "longitude": -110.8669,
+      "brightness": 356.42,
+      "frp": 3.84,
+      "confidence": "low",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 32.722,
+      "longitude": -111.57619,
+      "brightness": 338.2,
+      "frp": 2.18,
+      "confidence": "nominal",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 33.09167,
+      "longitude": -111.49279,
+      "brightness": 337.76,
+      "frp": 2.65,
+      "confidence": "low",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 32.95087,
+      "longitude": -112.13084,
+      "brightness": 335.18,
+      "frp": 3.74,
+      "confidence": "low",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 33.41711,
+      "longitude": -110.85839,
+      "brightness": 338.98,
+      "frp": 7.27,
+      "confidence": "nominal",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 33.41979,
+      "longitude": -110.86045,
+      "brightness": 335.58,
+      "frp": 4.26,
+      "confidence": "nominal",
+      "acq_date": "2026-05-18",
+      "acq_time": "1949",
       "satellite": "N20"
     }
   ]
