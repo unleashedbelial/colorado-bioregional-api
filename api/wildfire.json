@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-05-21T22:46:44.316209+00:00",
-  "fire_count": 33,
+  "last_updated": "2026-05-21T23:52:39.614275+00:00",
+  "fire_count": 40,
   "fires": [
     {
       "latitude": 41.3078,
@@ -339,6 +339,76 @@
       "confidence": "nominal",
       "acq_date": "2026-05-21",
       "acq_time": "0915",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 40.03131,
+      "longitude": -113.95735,
+      "brightness": 340.31,
+      "frp": 4.28,
+      "confidence": "low",
+      "acq_date": "2026-05-21",
+      "acq_time": "2036",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 40.82148,
+      "longitude": -114.25461,
+      "brightness": 335.23,
+      "frp": 2.08,
+      "confidence": "nominal",
+      "acq_date": "2026-05-21",
+      "acq_time": "2036",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 31.14966,
+      "longitude": -110.66843,
+      "brightness": 345.14,
+      "frp": 6.19,
+      "confidence": "nominal",
+      "acq_date": "2026-05-21",
+      "acq_time": "2034",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 31.15297,
+      "longitude": -110.66908,
+      "brightness": 342.59,
+      "frp": 3.66,
+      "confidence": "low",
+      "acq_date": "2026-05-21",
+      "acq_time": "2034",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.37233,
+      "longitude": -112.06467,
+      "brightness": 367.0,
+      "frp": 9.9,
+      "confidence": "high",
+      "acq_date": "2026-05-21",
+      "acq_time": "2034",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.37172,
+      "longitude": -112.06882,
+      "brightness": 349.99,
+      "frp": 9.9,
+      "confidence": "nominal",
+      "acq_date": "2026-05-21",
+      "acq_time": "2034",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.37295,
+      "longitude": -112.06051,
+      "brightness": 350.57,
+      "frp": 11.13,
+      "confidence": "low",
+      "acq_date": "2026-05-21",
+      "acq_time": "2034",
       "satellite": "N20"
     }
   ]
