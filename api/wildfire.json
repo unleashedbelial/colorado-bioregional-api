@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-06-07T21:41:52.821075+00:00",
-  "fire_count": 33,
+  "last_updated": "2026-06-07T22:54:23.963890+00:00",
+  "fire_count": 40,
   "fires": [
     {
       "latitude": 41.78207,
@@ -339,6 +339,76 @@
       "confidence": "nominal",
       "acq_date": "2026-06-07",
       "acq_time": "1036",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20558,
+      "longitude": -112.16039,
+      "brightness": 367.0,
+      "frp": 61.41,
+      "confidence": "high",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20726,
+      "longitude": -112.15078,
+      "brightness": 335.96,
+      "frp": 2.97,
+      "confidence": "nominal",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20642,
+      "longitude": -112.15559,
+      "brightness": 367.0,
+      "frp": 61.41,
+      "confidence": "low",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20575,
+      "longitude": -112.15838,
+      "brightness": 367.0,
+      "frp": 54.55,
+      "confidence": "high",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20661,
+      "longitude": -112.15358,
+      "brightness": 352.1,
+      "frp": 54.55,
+      "confidence": "nominal",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20911,
+      "longitude": -112.15942,
+      "brightness": 347.85,
+      "frp": 54.55,
+      "confidence": "nominal",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.20995,
+      "longitude": -112.15472,
+      "brightness": 367.0,
+      "frp": 54.55,
+      "confidence": "low",
+      "acq_date": "2026-06-07",
+      "acq_time": "2017",
       "satellite": "N20"
     }
   ]
