@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T11:11:06.753870+00:00",
+  "last_updated": "2026-06-25T13:32:02.209820+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-06-25T11:11:06.753870+00:00",
+    "last_updated": "2026-06-25T13:32:02.209820+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -32,9 +32,9 @@
         "longitude": -108.2661946,
         "parameter": "Streamflow",
         "latest": {
-          "value": 2060.0,
+          "value": 2100.0,
           "unit": "ft3/s",
-          "datetime": "2026-06-25T04:45:00.000-06:00",
+          "datetime": "2026-06-25T07:15:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -47,9 +47,9 @@
         "longitude": -111.58787222,
         "parameter": "Streamflow",
         "latest": {
-          "value": 8490.0,
+          "value": 6590.0,
           "unit": "ft3/s",
-          "datetime": "2026-06-25T03:00:00.000-07:00",
+          "datetime": "2026-06-25T06:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -62,9 +62,9 @@
         "longitude": -113.363544,
         "parameter": "Streamflow",
         "latest": {
-          "value": 9340.0,
+          "value": 8860.0,
           "unit": "ft3/s",
-          "datetime": "2026-06-25T03:30:00.000-07:00",
+          "datetime": "2026-06-25T05:30:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-06-25T11:11:06.753870+00:00",
+    "last_updated": "2026-06-25T13:32:02.209820+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -100,7 +100,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-06-25T11:11:06.753870+00:00",
+    "last_updated": "2026-06-25T13:32:02.209820+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,8 +218,8 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-06-25T11:11:06.753870+00:00",
-    "fire_count": 2543,
+    "last_updated": "2026-06-25T13:32:02.209820+00:00",
+    "fire_count": 2548,
     "fires": [
       {
         "latitude": 39.99978,
@@ -25649,6 +25649,56 @@
         "confidence": "high",
         "acq_date": "2026-06-24",
         "acq_time": "2140",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 41.24716,
+        "longitude": -112.23578,
+        "brightness": 301.05,
+        "frp": 0.65,
+        "confidence": "nominal",
+        "acq_date": "2026-06-25",
+        "acq_time": "0818",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 40.02245,
+        "longitude": -112.05242,
+        "brightness": 302.72,
+        "frp": 1.71,
+        "confidence": "nominal",
+        "acq_date": "2026-06-25",
+        "acq_time": "0818",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 38.93764,
+        "longitude": -112.81882,
+        "brightness": 297.15,
+        "frp": 1.55,
+        "confidence": "nominal",
+        "acq_date": "2026-06-25",
+        "acq_time": "0818",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.4201,
+        "longitude": -110.8633,
+        "brightness": 353.82,
+        "frp": 11.27,
+        "confidence": "nominal",
+        "acq_date": "2026-06-25",
+        "acq_time": "0820",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.41986,
+        "longitude": -110.85763,
+        "brightness": 311.53,
+        "frp": 7.87,
+        "confidence": "nominal",
+        "acq_date": "2026-06-25",
+        "acq_time": "0820",
         "satellite": "N20"
       }
     ]
