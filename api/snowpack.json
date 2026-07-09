@@ -2,17 +2,6 @@
   "source": "USDA Natural Resources Conservation Service SNOTEL",
   "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
   "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-  "last_updated": "2026-07-09T17:11:35.867406+00:00",
-  "stations": [
-    {
-      "station_id": "356",
-      "station_name": "Berthoud Summit",
-      "network": "SNOTEL",
-      "state": "CO",
-      "basin": "Upper Colorado River Basin",
-      "date": "",
-      "snow_water_equivalent_inches": null,
-      "unit": "inches"
-    }
-  ]
+  "last_updated": "2026-07-09T19:05:07.171495+00:00",
+  "stations": []
 }
