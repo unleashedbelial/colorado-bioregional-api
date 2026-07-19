@@ -1,5 +1,5 @@
 {
-  "source": "NASA FIRMS VIIRS NOAA-20 C2 (24h)",
+  "source": "NASA FIRMS",
   "source_url": "https://firms.modaps.eosdis.nasa.gov/",
   "description": "Active wildfires in the Colorado River Basin (31-42\u00b0N, 107-115\u00b0W), last 24 hours",
   "coverage_bbox": {
@@ -8,108 +8,7 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-07-19T01:48:28.814819+00:00",
-  "fire_count": 10,
-  "fires": [
-    {
-      "latitude": 38.19375,
-      "longitude": -107.52518,
-      "brightness": 303.18,
-      "frp": 3.6,
-      "confidence": "nominal",
-      "acq_date": "2026-07-17",
-      "acq_time": "0807",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 38.19357,
-      "longitude": -107.52438,
-      "brightness": 306.43,
-      "frp": 3.38,
-      "confidence": "nominal",
-      "acq_date": "2026-07-17",
-      "acq_time": "0807",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 38.93864,
-      "longitude": -112.81401,
-      "brightness": 306.63,
-      "frp": 1.21,
-      "confidence": "nominal",
-      "acq_date": "2026-07-17",
-      "acq_time": "0947",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 32.06052,
-      "longitude": -109.89423,
-      "brightness": 296.83,
-      "frp": 0.58,
-      "confidence": "nominal",
-      "acq_date": "2026-07-17",
-      "acq_time": "0949",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 40.18639,
-      "longitude": -111.8998,
-      "brightness": 330.42,
-      "frp": 9.83,
-      "confidence": "low",
-      "acq_date": "2026-07-17",
-      "acq_time": "2110",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 41.88514,
-      "longitude": -110.08702,
-      "brightness": 346.21,
-      "frp": 12.27,
-      "confidence": "nominal",
-      "acq_date": "2026-07-17",
-      "acq_time": "2110",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 33.41859,
-      "longitude": -110.86433,
-      "brightness": 311.23,
-      "frp": 1.8,
-      "confidence": "nominal",
-      "acq_date": "2026-07-18",
-      "acq_time": "0930",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 41.88129,
-      "longitude": -112.19817,
-      "brightness": 315.33,
-      "frp": 1.22,
-      "confidence": "nominal",
-      "acq_date": "2026-07-18",
-      "acq_time": "0928",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 36.35648,
-      "longitude": -114.90997,
-      "brightness": 315.83,
-      "frp": 2.02,
-      "confidence": "nominal",
-      "acq_date": "2026-07-18",
-      "acq_time": "0930",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 36.35713,
-      "longitude": -114.90904,
-      "brightness": 343.06,
-      "frp": 1.18,
-      "confidence": "low",
-      "acq_date": "2026-07-18",
-      "acq_time": "2051",
-      "satellite": "N20"
-    }
-  ]
+  "last_updated": "2026-07-19T05:12:47.304949+00:00",
+  "fire_count": 0,
+  "fires": []
 }
