@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-08-19T23:14:02.751943+00:00",
-  "fire_count": 69,
+  "last_updated": "2026-08-19T23:43:33.697506+00:00",
+  "fire_count": 76,
   "fires": [
     {
       "latitude": 41.783,
@@ -699,6 +699,76 @@
       "confidence": "nominal",
       "acq_date": "2026-08-19",
       "acq_time": "0930",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 31.52881,
+      "longitude": -110.39349,
+      "brightness": 331.15,
+      "frp": 4.12,
+      "confidence": "low",
+      "acq_date": "2026-08-19",
+      "acq_time": "2051",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.44216,
+      "longitude": -110.53762,
+      "brightness": 338.27,
+      "frp": 5.96,
+      "confidence": "low",
+      "acq_date": "2026-08-19",
+      "acq_time": "2051",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 35.51532,
+      "longitude": -113.31221,
+      "brightness": 337.54,
+      "frp": 2.01,
+      "confidence": "low",
+      "acq_date": "2026-08-19",
+      "acq_time": "2051",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.37069,
+      "longitude": -109.91031,
+      "brightness": 343.06,
+      "frp": 8.4,
+      "confidence": "nominal",
+      "acq_date": "2026-08-19",
+      "acq_time": "2053",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.37031,
+      "longitude": -109.91474,
+      "brightness": 341.66,
+      "frp": 8.31,
+      "confidence": "nominal",
+      "acq_date": "2026-08-19",
+      "acq_time": "2053",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.36995,
+      "longitude": -109.91887,
+      "brightness": 347.72,
+      "frp": 8.31,
+      "confidence": "nominal",
+      "acq_date": "2026-08-19",
+      "acq_time": "2053",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 39.37467,
+      "longitude": -109.91493,
+      "brightness": 367.0,
+      "frp": 8.31,
+      "confidence": "high",
+      "acq_date": "2026-08-19",
+      "acq_time": "2053",
       "satellite": "N20"
     }
   ]
