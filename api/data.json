@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26T11:29:46.656255+00:00",
+  "last_updated": "2026-08-26T11:56:39.435188+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-08-26T11:29:46.656255+00:00",
+    "last_updated": "2026-08-26T11:56:39.435188+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -34,7 +34,7 @@
         "latest": {
           "value": 1600.0,
           "unit": "ft3/s",
-          "datetime": "2026-08-26T05:15:00.000-06:00",
+          "datetime": "2026-08-26T05:30:00.000-06:00",
           "qualifiers": [
             "P"
           ]
@@ -62,9 +62,9 @@
         "longitude": -113.363544,
         "parameter": "Streamflow",
         "latest": {
-          "value": 9320.0,
+          "value": 9050.0,
           "unit": "ft3/s",
-          "datetime": "2026-08-26T03:30:00.000-07:00",
+          "datetime": "2026-08-26T04:30:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-08-26T11:29:46.656255+00:00",
+    "last_updated": "2026-08-26T11:56:39.435188+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -100,7 +100,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-08-26T11:29:46.656255+00:00",
+    "last_updated": "2026-08-26T11:56:39.435188+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,8 +218,8 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-08-26T11:29:46.656255+00:00",
-    "fire_count": 148,
+    "last_updated": "2026-08-26T11:56:39.435188+00:00",
+    "fire_count": 174,
     "fires": [
       {
         "latitude": 41.25272,
@@ -1699,6 +1699,266 @@
         "confidence": "nominal",
         "acq_date": "2026-08-25",
         "acq_time": "2040",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 34.07538,
+        "longitude": -110.13863,
+        "brightness": 311.11,
+        "frp": 1.56,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.63314,
+        "longitude": -109.6451,
+        "brightness": 326.46,
+        "frp": 2.93,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.63255,
+        "longitude": -109.64056,
+        "brightness": 322.04,
+        "frp": 2.93,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.63374,
+        "longitude": -109.64964,
+        "brightness": 316.95,
+        "frp": 2.64,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.63025,
+        "longitude": -109.65039,
+        "brightness": 327.33,
+        "frp": 2.64,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62906,
+        "longitude": -109.64131,
+        "brightness": 335.56,
+        "frp": 2.93,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62966,
+        "longitude": -109.64584,
+        "brightness": 307.48,
+        "frp": 2.93,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62677,
+        "longitude": -109.65112,
+        "brightness": 301.28,
+        "frp": 0.91,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62558,
+        "longitude": -109.64203,
+        "brightness": 309.61,
+        "frp": 1.96,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62209,
+        "longitude": -109.64272,
+        "brightness": 315.56,
+        "frp": 1.96,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62512,
+        "longitude": -109.64417,
+        "brightness": 309.58,
+        "frp": 1.36,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62163,
+        "longitude": -109.64486,
+        "brightness": 313.33,
+        "frp": 1.36,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.62104,
+        "longitude": -109.64043,
+        "brightness": 309.36,
+        "frp": 1.36,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.61814,
+        "longitude": -109.64557,
+        "brightness": 320.58,
+        "frp": 1.48,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.61756,
+        "longitude": -109.64114,
+        "brightness": 302.15,
+        "frp": 1.48,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.25922,
+        "longitude": -108.66965,
+        "brightness": 299.94,
+        "frp": 0.58,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.41842,
+        "longitude": -110.86595,
+        "brightness": 329.66,
+        "frp": 6.22,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.41779,
+        "longitude": -110.86086,
+        "brightness": 311.11,
+        "frp": 6.22,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 41.25261,
+        "longitude": -114.94043,
+        "brightness": 296.3,
+        "frp": 1.49,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0858",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 41.24331,
+        "longitude": -114.95378,
+        "brightness": 299.16,
+        "frp": 1.05,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0858",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 41.24308,
+        "longitude": -114.94998,
+        "brightness": 300.54,
+        "frp": 1.29,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0858",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 40.82294,
+        "longitude": -114.25467,
+        "brightness": 310.7,
+        "frp": 2.91,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0858",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 38.93821,
+        "longitude": -112.81548,
+        "brightness": 313.55,
+        "frp": 1.78,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0858",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 36.20798,
+        "longitude": -107.53577,
+        "brightness": 310.08,
+        "frp": 0.71,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0858",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 36.35939,
+        "longitude": -114.91414,
+        "brightness": 313.1,
+        "frp": 3.83,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 35.51902,
+        "longitude": -113.31498,
+        "brightness": 312.76,
+        "frp": 1.52,
+        "confidence": "nominal",
+        "acq_date": "2026-08-26",
+        "acq_time": "0900",
         "satellite": "N20"
       }
     ]
