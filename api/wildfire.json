@@ -1,5 +1,5 @@
 {
-  "source": "NASA FIRMS VIIRS NOAA-20 C2 (24h)",
+  "source": "NASA FIRMS",
   "source_url": "https://firms.modaps.eosdis.nasa.gov/",
   "description": "Active wildfires in the Colorado River Basin (31-42\u00b0N, 107-115\u00b0W), last 24 hours",
   "coverage_bbox": {
@@ -8,78 +8,7 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-09-08T05:27:38.218096+00:00",
-  "fire_count": 7,
-  "fires": [
-    {
-      "latitude": 36.36134,
-      "longitude": -114.91299,
-      "brightness": 301.45,
-      "frp": 1.35,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "0835",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 39.56485,
-      "longitude": -112.19789,
-      "brightness": 298.71,
-      "frp": 0.33,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "1013",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 38.93993,
-      "longitude": -112.81791,
-      "brightness": 312.04,
-      "frp": 1.3,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "1013",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 36.35937,
-      "longitude": -114.91113,
-      "brightness": 303.04,
-      "frp": 1.42,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "1013",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 39.44501,
-      "longitude": -111.54343,
-      "brightness": 352.16,
-      "frp": 14.25,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "2136",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 39.44171,
-      "longitude": -111.54388,
-      "brightness": 346.47,
-      "frp": 9.21,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "2136",
-      "satellite": "N20"
-    },
-    {
-      "latitude": 39.44167,
-      "longitude": -111.55153,
-      "brightness": 335.7,
-      "frp": 9.21,
-      "confidence": "nominal",
-      "acq_date": "2026-09-07",
-      "acq_time": "2136",
-      "satellite": "N20"
-    }
-  ]
+  "last_updated": "2026-09-08T09:55:39.793517+00:00",
+  "fire_count": 0,
+  "fires": []
 }
