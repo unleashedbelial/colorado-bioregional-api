@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17T09:01:08.467170+00:00",
+  "last_updated": "2026-09-17T14:21:28.937501+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,14 +23,61 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-09-17T09:01:08.467170+00:00",
-    "gauges": []
+    "last_updated": "2026-09-17T14:21:28.937501+00:00",
+    "gauges": [
+      {
+        "site_id": "09095500",
+        "site_name": "Colorado River near Cameo, CO",
+        "latitude": 39.2391463,
+        "longitude": -108.2661946,
+        "parameter": "Streamflow",
+        "latest": {
+          "value": 1420.0,
+          "unit": "ft3/s",
+          "datetime": "2026-09-17T08:00:00.000-06:00",
+          "qualifiers": [
+            "P"
+          ]
+        }
+      },
+      {
+        "site_id": "09380000",
+        "site_name": "Colorado River at Lees Ferry, AZ",
+        "latitude": 36.86433333,
+        "longitude": -111.58787222,
+        "parameter": "Streamflow",
+        "latest": {
+          "value": 6210.0,
+          "unit": "ft3/s",
+          "datetime": "2026-09-17T07:00:00.000-07:00",
+          "qualifiers": [
+            "P"
+          ]
+        }
+      },
+      {
+        "site_id": "09404200",
+        "site_name": "Colorado River near Grand Canyon, AZ",
+        "latitude": 35.7735994,
+        "longitude": -113.363544,
+        "parameter": "Streamflow",
+        "latest": {
+          "value": null,
+          "unit": "ft3/s",
+          "datetime": "2026-09-05T06:30:00.000-07:00",
+          "qualifiers": [
+            "P",
+            "Eqp"
+          ]
+        }
+      }
+    ]
   },
   "snowpack": {
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-09-17T09:01:08.467170+00:00",
+    "last_updated": "2026-09-17T14:21:28.937501+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -54,7 +101,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-09-17T09:01:08.467170+00:00",
+    "last_updated": "2026-09-17T14:21:28.937501+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -172,8 +219,8 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-09-17T09:01:08.467170+00:00",
-    "fire_count": 10,
+    "last_updated": "2026-09-17T14:21:28.937501+00:00",
+    "fire_count": 16,
     "fires": [
       {
         "latitude": 36.35742,
@@ -273,6 +320,66 @@
         "confidence": "low",
         "acq_date": "2026-09-16",
         "acq_time": "2025",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 40.82477,
+        "longitude": -114.25921,
+        "brightness": 307.91,
+        "frp": 1.58,
+        "confidence": "nominal",
+        "acq_date": "2026-09-17",
+        "acq_time": "0845",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 36.35793,
+        "longitude": -114.91563,
+        "brightness": 303.45,
+        "frp": 1.04,
+        "confidence": "nominal",
+        "acq_date": "2026-09-17",
+        "acq_time": "0848",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 35.51828,
+        "longitude": -113.317,
+        "brightness": 302.58,
+        "frp": 0.65,
+        "confidence": "nominal",
+        "acq_date": "2026-09-17",
+        "acq_time": "0848",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 36.36058,
+        "longitude": -114.91382,
+        "brightness": 301.04,
+        "frp": 0.78,
+        "confidence": "nominal",
+        "acq_date": "2026-09-17",
+        "acq_time": "1028",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 36.35814,
+        "longitude": -114.91164,
+        "brightness": 305.17,
+        "frp": 1.05,
+        "confidence": "nominal",
+        "acq_date": "2026-09-17",
+        "acq_time": "1028",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 35.51976,
+        "longitude": -113.31767,
+        "brightness": 297.65,
+        "frp": 1.23,
+        "confidence": "nominal",
+        "acq_date": "2026-09-17",
+        "acq_time": "1028",
         "satellite": "N20"
       }
     ]
