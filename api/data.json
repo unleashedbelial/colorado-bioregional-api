@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-07T20:36:16.371093+00:00",
+  "last_updated": "2026-11-08T00:04:29.295896+00:00",
   "coverage": {
     "region": "Colorado River Basin",
     "bbox": {
@@ -23,7 +23,7 @@
     "source_url": "https://waterservices.usgs.gov/",
     "description": "Real-time streamflow for Colorado River Basin gauges",
     "unit": "ft3/s (cubic feet per second)",
-    "last_updated": "2026-11-07T20:36:16.371093+00:00",
+    "last_updated": "2026-11-08T00:04:29.295896+00:00",
     "gauges": [
       {
         "site_id": "09095500",
@@ -32,9 +32,9 @@
         "longitude": -108.2661946,
         "parameter": "Streamflow",
         "latest": {
-          "value": 1570.0,
+          "value": 1560.0,
           "unit": "ft3/s",
-          "datetime": "2026-11-07T13:15:00.000-07:00",
+          "datetime": "2026-11-07T16:45:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -47,9 +47,9 @@
         "longitude": -111.58787222,
         "parameter": "Streamflow",
         "latest": {
-          "value": 7440.0,
+          "value": 7670.0,
           "unit": "ft3/s",
-          "datetime": "2026-11-07T13:00:00.000-07:00",
+          "datetime": "2026-11-07T14:00:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -62,9 +62,9 @@
         "longitude": -113.363544,
         "parameter": "Streamflow",
         "latest": {
-          "value": 12100.0,
+          "value": 12400.0,
           "unit": "ft3/s",
-          "datetime": "2026-11-07T12:30:00.000-07:00",
+          "datetime": "2026-11-07T16:30:00.000-07:00",
           "qualifiers": [
             "P"
           ]
@@ -76,7 +76,7 @@
     "source": "USDA Natural Resources Conservation Service SNOTEL",
     "source_url": "https://www.nrcs.usda.gov/wps/portal/wcc/home/",
     "description": "Snow Water Equivalent (SWE) for Upper Colorado River Basin SNOTEL stations",
-    "last_updated": "2026-11-07T20:36:16.371093+00:00",
+    "last_updated": "2026-11-08T00:04:29.295896+00:00",
     "stations": [
       {
         "station_id": "356",
@@ -100,7 +100,7 @@
       "center_lon": -112.5,
       "radius_km": 300
     },
-    "last_updated": "2026-11-07T20:36:16.371093+00:00",
+    "last_updated": "2026-11-08T00:04:29.295896+00:00",
     "locations": [
       {
         "name": "Grand Canyon NPS",
@@ -218,8 +218,8 @@
       "min_lon": -115,
       "max_lon": -107
     },
-    "last_updated": "2026-11-07T20:36:16.371093+00:00",
-    "fire_count": 23,
+    "last_updated": "2026-11-08T00:04:29.295896+00:00",
+    "fire_count": 28,
     "fires": [
       {
         "latitude": 40.12691,
@@ -449,6 +449,56 @@
         "confidence": "nominal",
         "acq_date": "2026-11-07",
         "acq_time": "0934",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 33.4165,
+        "longitude": -110.86133,
+        "brightness": 338.74,
+        "frp": 5.29,
+        "confidence": "nominal",
+        "acq_date": "2026-11-07",
+        "acq_time": "2053",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 35.16862,
+        "longitude": -108.46883,
+        "brightness": 341.71,
+        "frp": 9.99,
+        "confidence": "nominal",
+        "acq_date": "2026-11-07",
+        "acq_time": "2053",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 36.75478,
+        "longitude": -108.44916,
+        "brightness": 338.43,
+        "frp": 6.69,
+        "confidence": "nominal",
+        "acq_date": "2026-11-07",
+        "acq_time": "2053",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 39.00179,
+        "longitude": -112.3916,
+        "brightness": 336.57,
+        "frp": 5.42,
+        "confidence": "nominal",
+        "acq_date": "2026-11-07",
+        "acq_time": "2055",
+        "satellite": "N20"
+      },
+      {
+        "latitude": 39.00135,
+        "longitude": -112.39358,
+        "brightness": 337.32,
+        "frp": 5.67,
+        "confidence": "nominal",
+        "acq_date": "2026-11-07",
+        "acq_time": "2055",
         "satellite": "N20"
       }
     ]
