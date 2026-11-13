@@ -8,8 +8,8 @@
     "min_lon": -115,
     "max_lon": -107
   },
-  "last_updated": "2026-11-13T11:19:11.493049+00:00",
-  "fire_count": 31,
+  "last_updated": "2026-11-13T18:37:11.705277+00:00",
+  "fire_count": 36,
   "fires": [
     {
       "latitude": 40.72457,
@@ -319,6 +319,56 @@
       "confidence": "nominal",
       "acq_date": "2026-11-12",
       "acq_time": "2059",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 38.5268,
+      "longitude": -112.00946,
+      "brightness": 324.47,
+      "frp": 3.22,
+      "confidence": "nominal",
+      "acq_date": "2026-11-13",
+      "acq_time": "0919",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 34.7821,
+      "longitude": -112.08533,
+      "brightness": 300.76,
+      "frp": 1.04,
+      "confidence": "nominal",
+      "acq_date": "2026-11-13",
+      "acq_time": "0919",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 33.67805,
+      "longitude": -112.47877,
+      "brightness": 296.17,
+      "frp": 0.55,
+      "confidence": "nominal",
+      "acq_date": "2026-11-13",
+      "acq_time": "0919",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 32.4341,
+      "longitude": -114.81232,
+      "brightness": 301.03,
+      "frp": 0.92,
+      "confidence": "nominal",
+      "acq_date": "2026-11-13",
+      "acq_time": "0919",
+      "satellite": "N20"
+    },
+    {
+      "latitude": 32.43425,
+      "longitude": -114.80949,
+      "brightness": 302.53,
+      "frp": 0.72,
+      "confidence": "nominal",
+      "acq_date": "2026-11-13",
+      "acq_time": "0919",
       "satellite": "N20"
     }
   ]
